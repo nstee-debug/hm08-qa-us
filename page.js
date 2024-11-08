@@ -4,13 +4,34 @@ module.exports = {
     toField: '#to',
     phoneNumberField: '#phone',
     codeField: '#code',
+    cardNumberField: '#number',
+    cvvField: '.card-code-input #code',
+    driverMessage: '#comment',
     // Buttons
     callATaxiButton: 'button=Call a taxi',
     phoneNumberButton: '//div[starts-with(text(), "Phone number")]',
     nextButton: 'button=Next',
     confirmButton: 'button=Confirm',
+    supportivePlanButton: 'div=Supportive',
+    businessPlanButton: 'div=Business',
+    paymentMethodButton:'.pp-text',
+    addCardButton: 'div=Add card',
+    linkButton: 'button=Link',
+    cardAdded: 'div=Card',
+    blanketSwitch: '.switch', 
+    blanketSwitchInput: '.switch-input',
+    
+    iceCreamPlusButton: 'div=+', 
+    iceCreamValue: 'div=2',
+    placeOrderButton: 'smart-button-main=Order',
+    carSearchButton: '.smart-button',
+
     // Modals
-    phoneNumberModal: '.modal',
+    phoneNumberModal: ' .modal',
+    carSearchModal: 'div=Car search',
+    driverInfoModal: 'div=Driver info',
+
+        
     // Functions
     fillAddresses: async function(from, to) {
         const fromField = await $(this.fromField);
@@ -48,4 +69,5 @@ module.exports = {
         await codeField.setValue(code)
         await $(this.confirmButton).click()
     },
+  
 };

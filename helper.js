@@ -5,5 +5,13 @@ module.exports = {
     },
     getElementByText: async function(obj) {
         return await $(`div=${obj.toString()}`);
+    },
+    getCardNumber: function(){
+        const number = Math.floor(Math.random() * 1000000000000)
+        return number
+    },
+    getCvvNumber: function(){
+        const number = Math.floor(Math.random() * 100)
+        return number
     }
 };
